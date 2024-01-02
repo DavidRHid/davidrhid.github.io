@@ -23,7 +23,7 @@ function initializeSGDAnimation() {
 
     let data = {
         datasets: [{
-            label: 'Gradient Descent Path',
+            label: 'SGD',
             data: [],
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
             borderColor: 'rgba(255, 99, 132, 1)',
@@ -91,7 +91,7 @@ function initializeSGDAnimation() {
     
     setTimeout(() => {
         clearInterval(intervalId);
-    }, 5000); // 5 seconds
+    }, 7000); // 5 seconds
 }
 
 function adjustCanvasAspectRatio() {
@@ -123,7 +123,7 @@ function copyEmailToClipboard() {
 }
 
 function graduallyReduceNoise(elementId) {
-    const originalText = "I like to train deep neural nets on large datasets 🧠🤖💥";
+    const originalText = "I like to train deep neural nets on large datasets.";
     let currentText = addMaxNoise(originalText); // Starting with maximum noise
     document.getElementById(elementId).innerHTML = `<h2>${currentText}</h2>`;
 
@@ -156,7 +156,7 @@ function addMaxNoise(text) {
 function reduceNoise(noisyText, originalText, currentStep, totalSteps) {
     // Gradually restores characters to their original form
     return noisyText.split('').map((c, i) => {
-        if (Math.random() < currentStep / totalSteps) {
+        if (Math.random() < currentStep / totalSteps**1.2) {
             return originalText.charAt(i);
         }
         return c;
