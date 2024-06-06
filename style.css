@@ -75,37 +75,3 @@ body {
     font-size: 16px;
     background-color: #f1f1f1;
 }
-
-/* tree  */
-ul, #mlTree {
-    list-style-type: none;
-  }
-  
-  #mlTree {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .caret {
-    cursor: pointer;
-    user-select: none;
-  }
-  
-  .caret::before {
-    content: "\25B6";
-    color: black;
-    display: inline-block;
-    margin-right: 6px;
-  }
-  
-  .caret-down::before {
-    transform: rotate(90deg);
-  }
-  
-  .nested {
-    display: none;
-  }
-  
-  .active {
-    display: block;
-  }
